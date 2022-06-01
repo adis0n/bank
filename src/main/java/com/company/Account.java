@@ -59,7 +59,7 @@ public class Account {
 	public void addMoney(double amount){
 		this.balance = balance + amount;
 	}
-	public void subtractMoney(int amount){
+	public void subtractMoney(double amount){
 		if (this.balance >= amount){
 			this.balance = this.balance - amount;
 		}
