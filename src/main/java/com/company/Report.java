@@ -1,7 +1,5 @@
 package com.company;
 
-public class Report {
-	String id;
-	String type;
-	String description;
+public interface Report {
+	String generateReport();
 }

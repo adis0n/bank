@@ -1,9 +1,10 @@
 import com.company.Account;
 import com.company.DebitAccount;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.UUID;
+import org.junit.jupiter.api.BeforeEach;
+
 
 class AccountTest {
 	Account account;

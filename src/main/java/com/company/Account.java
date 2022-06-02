@@ -1,8 +1,10 @@
 package com.company;
+import com.company.commandPatern.BankReport;
+
 import java.util.UUID;
 
 
-public class Account {
+public class Account extends AccountReport {
 	UUID bankId;
 	UUID id;
 	long dateOfOpening;
@@ -50,6 +52,7 @@ public class Account {
 	}
 
 	public Account(UUID bankId, String owner){
+		super();
 		this.bankId = bankId;
 		this.id = UUID.randomUUID();
 		this.dateOfOpening = System.currentTimeMillis();
@@ -67,5 +70,6 @@ public class Account {
 	public void deposit(Account account, int amount){
 		Deposit.depositMoney(account,amount);
 	}
+
 
 }

@@ -1,11 +1,13 @@
 package com.company;
 
+import com.company.commandPatern.BankReport;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Bank {
+public class Bank implements BankReport {
 	UUID id;
 	String name;
 	String address;
@@ -111,4 +113,15 @@ public class Bank {
 	public void setTransactions(List<Transaction> transactions) {
 		this.transactions = transactions;
 	}
+
+	@Override
+	public Bank getContent() {
+		return this;
+	}
+
+	@Override
+	public void accept(ReportVisitor visitor) {
+		visitor.visit(this);
+	}
+
 }
