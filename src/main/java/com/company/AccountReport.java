@@ -14,6 +14,10 @@ public class AccountReport implements Report, ReportVisitor {
 		this.accounts=accounts;
 	}
 
+	public AccountReport() {
+
+	}
+
 	//not used here
 	@Override
 	public void visit(BankReport report) {
