@@ -10,6 +10,7 @@ public class Loan extends Product{
 	}
 
 	public void giveLoan(Account account){
+
 		interestRate = new InterestRate(this.interest, this.startDate, this.endDate);
 		loanRepayment = interestRate.calculateInterest(this.amount);
 		account.addMoney(amount);

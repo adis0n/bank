@@ -4,13 +4,23 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Product {
+public abstract class Product {
 	protected UUID id;
 	protected Account account;
 	protected String startDate;
 	protected String endDate;
 	protected double amount;
 	protected double interest;
+	protected InterestMechanism interestMechanism;
+	public Product(UUID id, Account account, String startDate, String endDate, double amount, double interest, InterestMechanism interestMechanism) {
+		this.id = id;
+		this.account = account;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.amount = amount;
+		this.interest = interest;
+		this.interestMechanism = interestMechanism;
+	}
 
 	public Product(UUID id, Account account, String startDate, String endDate, double amount, double interest) {
 		this.id = id;
@@ -22,6 +32,9 @@ public class Product {
 	}
 
 
+	public InterestRate calculateInterestRate(){
+		return interestMechanism.calculateInterest(interest, startDate, endDate);
+	}
 	public UUID getId() {
 		return id;
 	}

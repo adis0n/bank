@@ -11,12 +11,34 @@ public class Bank {
 	String address;
 	List<Account> accounts;
 	List<Transaction> transactions;
+	InterbankPaymentAgency interbankPaymentAgency;
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	double balance;
 	public Bank(){
 		this.id = UUID.randomUUID();
 		this.accounts = new ArrayList<>();
 		this.transactions = new ArrayList<>();
 	}
-
+	public void addBalance(double amount){
+		this.balance = this.balance + amount;
+	}
+	public void subtractBalance(double amount){
+		this.balance = this.balance + amount;
+	}
+	public void subtractBalanceInterbank(Account account, double amount){
+		account.subtractMoney(amount);
+	}
+	public void addBalanceInterbank(Account account, double amount){
+		account.addMoney(amount);
+	}
 	public void createAccount(Account account){
 		this.accounts.add(account);
 	}
@@ -30,7 +52,10 @@ public class Bank {
 		sender.subtractMoney(amount);
 		receiver.addMoney(amount);
 	}
-
+	public void trasnferMoney(Bank bSender, Bank bReceiver, Account sender, Account receiver, double amount){
+		sender.subtractMoney(amount);
+		receiver.addMoney(amount);
+	}
 
 
 	public UUID getId() {
