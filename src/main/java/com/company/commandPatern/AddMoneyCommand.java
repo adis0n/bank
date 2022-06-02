@@ -15,4 +15,9 @@ public class AddMoneyCommand implements Command{
 	public void execute() {
 		account.addMoney(amount);
 	}
+
+	@Override
+	public void withdrawOverflow(Account account, double amount) {
+
+	}
 }

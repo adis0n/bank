@@ -18,4 +18,9 @@ public class SendMoneyCommand implements Command{
 		senderAccount.subtractMoney(amount);
 		receiverAccount.addMoney(amount);
 	}
+
+	@Override
+	public void withdrawOverflow(Account account, double amount) {
+
+	}
 }
