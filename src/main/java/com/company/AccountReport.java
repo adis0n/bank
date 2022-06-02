@@ -7,9 +7,9 @@ import java.util.List;
 
 public class AccountReport implements Report, ReportVisitor {
 	List<Account> accounts;
-	String content;
+	String content = "Accounts report:\n";
 	public AccountReport(List<Account> accounts){
-		accounts = new ArrayList<Account>();
+		this.accounts = new ArrayList<Account>();
 		this.accounts=accounts;
 	}
 
@@ -29,6 +29,9 @@ public class AccountReport implements Report, ReportVisitor {
 
 	@Override
 	public String generateReport() {
+		for (Account i : accounts){
+			content = content + "owner: " + i.owner + " balance:" + i.getBalance();
+		}
 		return content;
 	}
 }

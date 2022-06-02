@@ -11,6 +11,11 @@ public class Account extends AccountReport {
 	String owner;
 	double balance;
 
+	public void accept(ReportVisitor visitor){
+		visitor.visit(this);
+	}
+
+
 	public UUID getBankId() {
 		return bankId;
 	}
