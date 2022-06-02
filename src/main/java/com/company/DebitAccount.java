@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.UUID;
 
+//self-explaining; able to have debit
 public class DebitAccount extends Account{
 	int capability;
 	public DebitAccount(UUID bankId, String owner) {

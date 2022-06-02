@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.UUID;
 
+//pretty obvious
 public class Loan extends Product{
 	double loanRepayment;
 	InterestRate interestRate;

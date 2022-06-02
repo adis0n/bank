@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+//mediator class
 public class InterbankPaymentAgency {
 	public InterbankPaymentAgency(){
 		this.banks = new ArrayList<>();

@@ -2,6 +2,8 @@ package com.company.commandPatern;
 
 import com.company.Account;
 
+
+//command to execute
 public class SendMoneyCommand implements Command{
 	private Account senderAccount;
 	private Account receiverAccount;

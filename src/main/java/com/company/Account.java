@@ -11,6 +11,7 @@ public class Account extends AccountReport {
 	String owner;
 	double balance;
 
+	//for visitor
 	public void accept(ReportVisitor visitor){
 		visitor.visit(this);
 	}

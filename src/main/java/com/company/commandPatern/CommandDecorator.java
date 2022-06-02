@@ -2,6 +2,7 @@ package com.company.commandPatern;
 
 import com.company.Account;
 
+//main decorator
 public class CommandDecorator implements Command{
 	protected Command command;
 	public CommandDecorator(Command command){

@@ -1,5 +1,7 @@
 package com.company;
 
+
+//class to make calculations nice
 public class InterestRate {
 	double value;
 	String endDate;

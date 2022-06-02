@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 
+
+//abstract class; deposit, loan implements it
 public abstract class Product {
 	protected UUID id;
 	protected Account account;

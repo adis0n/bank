@@ -7,13 +7,14 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+//most important class
 public class Bank implements BankReport {
 	UUID id;
 	String name;
 	String address;
 	List<Account> accounts;
 	List<Transaction> transactions;
-	InterbankPaymentAgency interbankPaymentAgency;
+	InterbankPaymentAgency interbankPaymentAgency; //for state pattern; didnt manage to finish it in sensible way
 
 	public double getBalance() {
 		return balance;
@@ -54,6 +55,7 @@ public class Bank implements BankReport {
 		sender.subtractMoney(amount);
 		receiver.addMoney(amount);
 	}
+	//used before
 	public void trasnferMoney(Bank bSender, Bank bReceiver, Account sender, Account receiver, double amount){
 		sender.subtractMoney(amount);
 		receiver.addMoney(amount);

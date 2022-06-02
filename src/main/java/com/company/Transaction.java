@@ -2,6 +2,8 @@ package com.company;
 
 import java.util.Objects;
 
+
+//not used at all
 public class Transaction {
 	int id;
 	String type;
