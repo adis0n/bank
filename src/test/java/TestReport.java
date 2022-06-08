@@ -18,6 +18,7 @@ class TestReport {
 		accounts.add(account);
 		AccountReport visitor = new AccountReport(accounts);
 		account.accept(visitor);
-		System.out.println(visitor.generateReport());
+		Assertions.assertEquals("Accounts report:\nowner: tylski balance:911.0", visitor.generateReport());
+
 	}
 }

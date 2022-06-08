@@ -25,14 +25,14 @@ public class AccountReport implements Report, ReportVisitor {
 
 	@Override
 	public void visit(AccountReport report) {
-		content=accounts.toString();
+
 	}
 
 
 	@Override
 	public String generateReport() {
 		for (Account i : accounts){
-			content = content + "owner: " + i.owner + " balance:" + i.getBalance();
+			content = content + "owner: " + i.owner + " balance:" + i.getBalance() + "\n";
 		}
 		return content;
 	}

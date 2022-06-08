@@ -13,7 +13,7 @@ public abstract class Product {
 	protected String endDate;
 	protected double amount;
 	protected double interest;
-	protected InterestMechanism interestMechanism;
+	protected InterestMechanism interestMechanism;//niedokonczony state pattern
 	public Product(UUID id, Account account, String startDate, String endDate, double amount, double interest, InterestMechanism interestMechanism) {
 		this.id = id;
 		this.account = account;
